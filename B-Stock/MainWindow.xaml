@@ -1,0 +1,85 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:B_Stock"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="B_Stock.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="727.333" Width="679" Background="#FFE4E4E4">
+    <Grid>
+        <GroupBox x:Name="groupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="84" Width="337" Margin="15,25,0,0" FontSize="14.667" />
+        <GroupBox x:Name="grbMAC_ID" Header="MAC ID" HorizontalAlignment="Left" VerticalAlignment="Top" Height="130" Width="337" Margin="15,114,0,0" FontSize="13.333"/>
+
+        <Label x:Name="lbAPN" Content="APN" HorizontalAlignment="Left" Height="30" Margin="20,34,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbAPN" HorizontalAlignment="Left" Height="30" Margin="132,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" KeyDown="tbAPN_KeyDown" LostFocus="tbAPN_LostFocus"/>
+        <Label x:Name="lbSN" Content="SN" HorizontalAlignment="Left" Height="30" Margin="20,68,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbSN" HorizontalAlignment="Left" Height="30" Margin="132,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" KeyDown="tbSN_KeyDown" LostFocus="tbSN_LostFocus"/>
+
+        <Label x:Name="lbEtherMac" Content="Ether Mac" HorizontalAlignment="Left" Height="30" Margin="20,135,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbEtherMac" HorizontalAlignment="Left" Height="30" Margin="132,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbBT_Mac" Content="BT MAC" HorizontalAlignment="Left" Height="30" Margin="20,170,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbBT_Mac" HorizontalAlignment="Left" Height="30" Margin="132,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbAirMac" Content="Air Mac" HorizontalAlignment="Left" Height="30" Margin="20,205,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbAirMac" HorizontalAlignment="Left" Height="30" Margin="132,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+
+        <GroupBox x:Name="grSIPROM_MLB" Header="SIPROM/MLB" HorizontalAlignment="Left" VerticalAlignment="Top" Height="94" Width="337" Margin="15,252,0,0" FontSize="13.333"/>
+        <Label x:Name="lbSIPROM_Mac" Content="SIPROM Mac" HorizontalAlignment="Left" Height="30" Margin="20,274,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbSIPROM_Mac" HorizontalAlignment="Left" Height="30" Margin="132,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbMLB_SN" Content="MLB SN" HorizontalAlignment="Left" Height="30" Margin="20,308,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbMLB_SN" HorizontalAlignment="Left" Height="30" Margin="132,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+
+        <GroupBox x:Name="grbUnit_Info"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="161" Width="626" Margin="15,360,0,0" FontSize="14.667"/>
+        <Label x:Name="lbUPC" Content="UPC" HorizontalAlignment="Left" Height="30" Margin="20,370,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbUPC" HorizontalAlignment="Left" Height="30" Margin="132,370,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbFamilyNo" Content="FAMILY NO" HorizontalAlignment="Left" Height="30" Margin="20,406,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbFamilyNo" HorizontalAlignment="Left" Height="30" Margin="132,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbCONFIG" Content="CONFIG" HorizontalAlignment="Left" Height="30" Margin="20,440,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbCONFIG" HorizontalAlignment="Left" Height="30" Margin="132,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="498" FontSize="14.667" IsEnabled="False"/>
+        <Label x:Name="lbSizeType" Content="Size Type" HorizontalAlignment="Left" Height="30" Margin="20,475,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667"/>
+        <TextBox x:Name="tbSizeType" HorizontalAlignment="Left" Height="30" Margin="132,475,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="498" FontSize="14.667" IsEnabled="False"/>
+
+        <CheckBox x:Name="checkBox" Content="Ethernet Label Printer" HorizontalAlignment="Left" Height="23" Margin="375,19,0,0" VerticalAlignment="Top" Width="255" FontSize="14.667"/>
+        <CheckBox x:Name="checkBox_Copy" Content="Marketing Label Printer" HorizontalAlignment="Left" Height="23" Margin="375,48,0,0" VerticalAlignment="Top" Width="255" FontSize="14.667"/>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="233" Margin="375,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="266" Background="#FFFDFFC9"/>
+
+        <GroupBox x:Name="grbMAC_ID_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="120" Width="626" Margin="15,535,0,0" FontSize="14.667"/>
+        <Label x:Name="lbRMA_SN" Content="RMA SN" HorizontalAlignment="Left" Height="30" Margin="20,546,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbRMA_SN" HorizontalAlignment="Left" Height="30" Margin="96,546,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <Label x:Name="lbRMA_No" Content="RMA NO" HorizontalAlignment="Left" Height="30" Margin="20,581,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbRMA_No" HorizontalAlignment="Left" Height="30" Margin="96,581,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <Label x:Name="lbCustPN" Content="Cust PN" HorizontalAlignment="Left" Height="30" Margin="20,616,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbCustPN" HorizontalAlignment="Left" Height="30" Margin="96,616,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <Label x:Name="lbSYSSN" Content="SYS SN" HorizontalAlignment="Left" Height="30" Margin="348,546,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbSYSSN" HorizontalAlignment="Left" Height="30" Margin="424,546,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <Label x:Name="lbTKNo" Content="TK NO" HorizontalAlignment="Left" Height="30" Margin="348,581,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbTKNo" HorizontalAlignment="Left" Height="30" Margin="424,581,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <Label x:Name="lbModel" Content="MODEL" HorizontalAlignment="Left" Height="30" Margin="348,616,0,0" VerticalAlignment="Top" Width="112" FontSize="14.667" FontWeight="Bold"/>
+        <TextBox x:Name="tbModel" HorizontalAlignment="Left" Height="30" Margin="424,616,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" FontSize="14.667"/>
+        <StatusBar x:Name="sttBar" HorizontalAlignment="Left" Height="37" Margin="0,660,0,0" VerticalAlignment="Bottom" Width="671">
+
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="550" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem>
+                <TextBlock Name="tblkStatus" />
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Name="tblkRegionStatus" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <Button x:Name="btClear" Content="Clear" HorizontalAlignment="Left" Height="29" Margin="407,317,0,0" VerticalAlignment="Top" Width="85" Click="btClear_Click"/>
+        <Button x:Name="btExit" Content="Exit" HorizontalAlignment="Left" Height="29" Margin="536,317,0,0" VerticalAlignment="Top" Width="85" Click="btExit_Click"/>
+
+    </Grid>
+</Window>
